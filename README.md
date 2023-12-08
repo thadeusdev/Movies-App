@@ -3,7 +3,7 @@
 ![IntroActivity](/IntroActivity.png "Optional title")
 
 ## Login Activity
-![LoginActivity](/IntroActivity.png "Optional title")
+![LoginActivity](/Login.png "Optional title")
 
 ## Main Activity
 ![MainActivity](/MainActivity.png "Optional title")

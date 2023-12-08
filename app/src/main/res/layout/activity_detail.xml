@@ -7,7 +7,8 @@
     android:background="@color/main_color"
     tools:context=".Activities.DetailActivity">
 
-    <ScrollView
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollView2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -24,12 +25,19 @@
                 android:id="@+id/picDetail"
                 android:layout_width="match_parent"
                 android:layout_height="400dp"
-
-                android:layout_marginBottom="8dp"
-                app:layout_constraintBottom_toTopOf="@+id/constraintLayout3"
+                android:scaleType="centerCrop"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="wrap_content"
+                android:layout_height="200dp"
+                android:background="@drawable/gradient_background"
+                app:layout_constraintBottom_toBottomOf="@+id/picDetail"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/constraintLayout4"
@@ -44,7 +52,7 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <ImageView
-                    android:id="@+id/imageView4"
+                    android:id="@+id/backImg"
                     android:layout_width="35dp"
                     android:layout_height="35dp"
                     android:background="@drawable/oval_btn_background"
@@ -119,6 +127,8 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/genreView"
                 android:layout_width="match_parent"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
                 android:layout_height="match_parent"
                 android:layout_marginTop="32dp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -166,10 +176,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:layout_marginBottom="16dp"
-                android:text="tes"
+                android:text="test"
                 android:textColor="@color/white"
-                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/textView21"
                 app:layout_constraintTop_toBottomOf="@+id/textView21" />
 
@@ -177,6 +185,8 @@
                 android:id="@+id/imagesRecycler"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:paddingEnd="8dp"
+                android:paddingStart="8dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/movieActorInfo" />
@@ -186,12 +196,12 @@
                 style="?android:attr/progressBarStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:visibility="visible"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:visibility="gone" />
+                app:layout_constraintTop_toTopOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-    </ScrollView>
+    </androidx.core.widget.NestedScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
